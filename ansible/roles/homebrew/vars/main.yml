@@ -1,0 +1,26 @@
+---
+homebrew_taps:
+  - { name: homebrew/cask,      state: present }
+  - { name: homebrew/core,      state: present }
+  - { name: homebrew/services,  state: present }
+
+homebrew_installed_packages:
+  - { name: git,                state: latest  }
+  - { name: git-flow,           state: latest  }
+  - { name: libressl,           state: latest  }
+  - { name: openssl@1.1,        state: latest  }
+  - { name: openssl@3.0,        state: latest  }
+  - { name: python@3.12,        state: latest  }
+  - { name: tmux,               state: latest  }
+
+homebrew_cask_installed_packages:
+  - { name: alfred,             state: latest  }
+  - { name: dash,               state: latest  }
+  - { name: firefox,            state: latest  }
+  - { name: github,             state: latest  }
+  - { name: google-chrome,      state: latest  }
+  - { name: google-cloud-sdk,   state: latest  }
+  - { name: google-drive,       state: latest  }
+  - { name: multipass,          state: latest  }
+  - { name: slack,              state: latest  }
+  - { name: visual-studio-code, state: latest  }
