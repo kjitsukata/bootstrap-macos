@@ -1,0 +1,32 @@
+---
+- name: homebrew update
+  community.general.homebrew:
+    update_homebrew: true
+    upgrade_all: true
+  tags: homebrew
+
+- name: homebrew package upgrade
+  homebrew_cask:
+    upgrade_all: true
+  tags: homebrew_cask
+
+- name: homebrew taps are enabled
+  homebrew_tap:
+    name: "{{ item.name }}"
+    state: "{{ item.state }}"
+  with_items: "{{ homebrew_taps }}"
+  tags: homebrew, homebrew_cask
+
+- name: homebrew packages are installed
+  community.general.homebrew:
+    name: "{{ item.name }}"
+    state: "{{ item.state }}"
+  with_items: "{{ homebrew_installed_packages }}"
+  tags: homebrew
+
+- name: homebrew cask packages are installed
+  community.general.homebrew_cask:
+    name: "{{ item.name }}"
+    state: "{{ item.state }}"
+  with_items: "{{ homebrew_cask_installed_packages }}"
+  tags: homebrew_cask
