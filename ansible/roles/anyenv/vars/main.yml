@@ -1,0 +1,9 @@
+---
+anyenv:
+  git_repo: "https://github.com/anyenv/anyenv.git"
+  install_dir: "~/.anyenv"
+  bin_path: "~/.anyenv/bin/anyenv"
+
+anyenv_install:
+  git_repo: "https://github.com/anyenv/anyenv-install.git"
+  install_dir: "~/.config/anyenv/anyenv-install"

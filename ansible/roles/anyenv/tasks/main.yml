@@ -1,0 +1,39 @@
+---
+- name: Cloning anyenv
+  git:
+    clone: yes
+    repo: "{{ anyenv.git_repo }}"
+    dest: "{{ anyenv.install_dir }}"
+  changed_when: False
+  tags:
+    - anyenv
+
+- name: Making anyenv-install directories
+  file:
+    path: "{{ item }}"
+    state: directory
+    mode: 0755
+  with_items:
+    - "$HOME/.config"
+    - "$HOME/.config/anyenv"
+  tags:
+    - anyenv
+
+- name: Cloning anyenv-install
+  git:
+    clone: yes
+    repo: "{{ anyenv_install.git_repo }}"
+    dest: "{{ anyenv_install.install_dir }}"
+  changed_when: False
+  tags:
+    - anyenv
+
+- name: Adding anyenv configurations
+  blockinfile:
+    path: ~/.zshrc
+    insertafter: "^## anyenv config"
+    block: |
+      export PATH="$HOME/.anyenv/bin:$PATH"
+      eval "$(anyenv init -)"
+  tags:
+    - anyenv
