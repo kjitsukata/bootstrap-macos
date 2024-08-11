@@ -1,0 +1,37 @@
+---
+- name: Installing rbenv
+  shell: "{{ anyenv.bin_path }} install rbenv"
+  args:
+    creates: "{{ rbenv.bin_path }}"
+  tags:
+    - rbenv
+
+- name: Checking whether a specific version of ruby is installed
+  shell: "rbenv versions | grep {{ item }}"
+  register: rubyver
+  with_items: "{{ rbenv.ruby_versions }}"
+  changed_when: False
+  failed_when: False
+  tags:
+    - rbenv
+
+- name: Installing ruby
+  shell: "rbenv install {{ item.item }}"
+  when: item.rc != 0
+  with_items: "{{ rubyver.results }}"
+  tags:
+    - rbenv
+
+- name: CHecking ruby global version
+  shell: "rbenv version | grep {{ rbenv.ruby_global_version }}"
+  register: globalver
+  changed_when: False
+  failed_when: False
+  tags:
+    - rbenv
+
+- name: Setting ruby glocal version
+  shell: "rbenv global {{ rbenv.ruby_global_version }}"
+  when: globalver.rc != 0
+  tags:
+    - rbenv

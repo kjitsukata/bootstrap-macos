@@ -7,3 +7,11 @@ anyenv:
 anyenv_install:
   git_repo: "https://github.com/anyenv/anyenv-install.git"
   install_dir: "~/.config/anyenv/anyenv-install"
+
+rbenv:
+  bin_path: "~/.anyenv/envs/rbenv/bin/rbenv"
+  ruby_global_version: 3.3.4
+  ruby_versions:
+    - 3.3.4
+    - 2.7.8
+    - 2.6.10
