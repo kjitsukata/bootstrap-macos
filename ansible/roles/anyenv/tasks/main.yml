@@ -41,4 +41,8 @@
   import_tasks: rbenv.yml
   tags:
     - rbenv
- 
+
+- name: Importing tfenv tasks
+  import_tasks: tfenv.yml
+  tags:
+    - tfenv

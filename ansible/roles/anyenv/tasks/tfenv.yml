@@ -1,0 +1,37 @@
+---
+- name: Installing tfenv
+  shell: "{{ anyenv.bin_path }} install tfenv"
+  args:
+    creates: "{{ tfenv.bin_path }}"
+  tags:
+    - tfenv
+
+- name: Checking whether a specific version of terraform is installed
+  shell: "tfenv list | grep {{ item }}"
+  register: terraformver
+  with_items: "{{ tfenv.terraform_versions }}"
+  changed_when: False
+  failed_when: False
+  tags:
+    - tfenv
+
+- name: Installing terraform
+  shell: "tfenv install {{ item.item }}"
+  when: item.rc != 0
+  with_items: "{{ terraformver.results }}"
+  tags:
+    - tfenv
+
+- name: Checking terraform default version
+  shell: "tfenv list | grep '*' | grep {{ tfenv.terraform_default_version }}"
+  register: defaultver
+  changed_when: False
+  failed_when: False
+  tags:
+    - tfenv
+
+- name: Setting terraform default version
+  shell: "tfenv use {{ tfenv.terraform_default_version }}"
+  when: defaultver.rc != 0
+  tags:
+    - tfenv
