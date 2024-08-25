@@ -15,3 +15,10 @@ rbenv:
     - 3.3.4
     - 2.7.8
     - 2.6.10
+
+tfenv:
+  bin_path: "~/.anyenv/envs/tfenv/bin/tfenv"
+  terraform_default_version: 1.9.5
+  terraform_versions:
+    - 1.10.0-alpha20240814
+    - 1.9.5
