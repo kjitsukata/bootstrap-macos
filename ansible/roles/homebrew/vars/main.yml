@@ -11,6 +11,7 @@ homebrew_installed_packages:
   - { name: libressl,           state: latest  }
   - { name: openssl@1.1,        state: latest  }
   - { name: openssl@3.0,        state: latest  }
+  - { name: packer,             state: latest  }
   - { name: python@3.12,        state: latest  }
   - { name: tmux,               state: latest  }
 
@@ -25,4 +26,6 @@ homebrew_cask_installed_packages:
   - { name: google-drive,       state: latest  }
   - { name: multipass,          state: latest  }
   - { name: slack,              state: latest  }
+  - { name: vagrant,            state: latest  }
+  - { name: virtualbox,         state: latest  }
   - { name: visual-studio-code, state: latest  }
