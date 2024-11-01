@@ -1,0 +1,37 @@
+---
+- name: Installing plenv
+  shell: "{{ anyenv.bin_path }} install plenv"
+  args:
+    creates: "{{ plenv.bin_path }}"
+  tags:
+    - plenv
+
+- name: Checking whether a specific version of perl is installed
+  shell: "plenv versions | grep {{ item }}"
+  register: perlver
+  with_items: "{{ plenv.perl_versions }}"
+  changed_when: False
+  failed_when: False
+  tags:
+    - plenv
+
+- name: Installing perl
+  shell: "plenv install {{ item.item }}"
+  when: item.rc != 0
+  with_items: "{{ perlver.results }}"
+  tags:
+    - plenv
+
+- name: CHecking perl global version
+  shell: "plenv version | grep {{ plenv.perl_global_version }}"
+  register: globalver
+  changed_when: False
+  failed_when: False
+  tags:
+    - plenv
+
+- name: Setting perl glocal version
+  shell: "plenv global {{ plenv.perl_global_version }}"
+  when: globalver.rc != 0
+  tags:
+    - plenv
