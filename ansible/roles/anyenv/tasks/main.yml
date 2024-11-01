@@ -37,10 +37,16 @@
       eval "$(anyenv init -)"
   tags:
     - anyenv
+
 - name: Importing rbenv tasks
   import_tasks: rbenv.yml
   tags:
     - rbenv
+
+- name: Importing plenv tasks
+  import_tasks: plenv.yml
+  tags:
+    - plenv
 
 - name: Importing tfenv tasks
   import_tasks: tfenv.yml

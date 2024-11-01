@@ -16,6 +16,12 @@ rbenv:
     - 2.7.8
     - 2.6.10
 
+plenv:
+  bin_path: "~/.anyenv/envs/plenv/bin/plenv"
+  perl_global_version: 5.40.0
+  perl_versions:
+    - 5.40.0
+
 tfenv:
   bin_path: "~/.anyenv/envs/tfenv/bin/tfenv"
   terraform_default_version: 1.9.5
