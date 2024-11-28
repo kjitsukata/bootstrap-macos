@@ -25,6 +25,7 @@ homebrew_cask_installed_packages:
   - { name: google-cloud-sdk,   state: latest  }
   - { name: google-drive,       state: latest  }
   - { name: multipass,          state: latest  }
+  - { name: rectangle,          state: latest  }
   - { name: slack,              state: latest  }
   - { name: vagrant,            state: latest  }
   - { name: virtualbox,         state: latest  }
