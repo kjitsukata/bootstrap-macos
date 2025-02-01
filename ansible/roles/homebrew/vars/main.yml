@@ -18,6 +18,7 @@ homebrew_installed_packages:
 homebrew_cask_installed_packages:
   - { name: alfred,             state: latest  }
   - { name: dash,               state: latest  }
+  - { name: docker,             state: latest  }
   - { name: dropbox,            state: latest  }
   - { name: firefox,            state: latest  }
   - { name: github,             state: latest  }
