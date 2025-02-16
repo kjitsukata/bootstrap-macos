@@ -24,7 +24,8 @@ plenv:
 
 tfenv:
   bin_path: "~/.anyenv/envs/tfenv/bin/tfenv"
-  terraform_default_version: 1.9.5
+  terraform_default_version: 1.10.5
   terraform_versions:
-    - 1.10.0-alpha20240814
-    - 1.9.5
+    - 1.12.0-alpha20250213
+    - 1.10.5
+    - 1.9.8
