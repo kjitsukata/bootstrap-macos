@@ -1,7 +1,6 @@
 ---
 homebrew_taps:
-  - { name: homebrew/cask,      state: present }
-  - { name: homebrew/core,      state: present }
+  - { name: homebrew/bundle,    state: present }
   - { name: homebrew/services,  state: present }
 
 homebrew_installed_packages:
