@@ -8,6 +8,9 @@ homebrew_installed_packages:
   - { name: git-flow,           state: latest  }
   - { name: grep,               state: latest  }
   - { name: libressl,           state: latest  }
+  - { name: mysql-client,       state: latest  }
+  - { name: mysql-client@8.0,   state: latest  }
+  - { name: mysql-client@8.4,   state: latest  }
   - { name: openssl@1.1,        state: latest  }
   - { name: openssl@3.0,        state: latest  }
   - { name: packer,             state: latest  }
@@ -25,7 +28,9 @@ homebrew_cask_installed_packages:
   - { name: google-cloud-sdk,   state: latest  }
   - { name: google-drive,       state: latest  }
   - { name: multipass,          state: latest  }
+  - { name: mysqlworkbench,     state: latest  }
   - { name: rectangle,          state: latest  }
+  - { name: sequel-ace,         state: latest  }
   - { name: slack,              state: latest  }
   - { name: vagrant,            state: latest  }
   - { name: virtualbox,         state: latest  }
