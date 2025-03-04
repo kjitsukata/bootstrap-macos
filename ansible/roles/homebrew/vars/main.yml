@@ -20,6 +20,7 @@ homebrew_installed_packages:
 homebrew_cask_installed_packages:
   - { name: alfred,             state: latest  }
   - { name: appcleaner,         state: latest  }
+  - { name: battery,            state: latest  }
   - { name: dash,               state: latest  }
   - { name: docker,             state: latest  }
   - { name: dropbox,            state: latest  }
