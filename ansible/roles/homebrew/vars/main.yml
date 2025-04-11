@@ -1,7 +1,8 @@
 ---
 homebrew_taps:
-  - { name: homebrew/bundle,    state: present }
-  - { name: homebrew/services,  state: present }
+  - { name: homebrew/bundle,          state: present }
+  - { name: homebrew/services,        state: present }
+  - { name: railwaycat/emacsmacport,  state: present }
 
 homebrew_installed_packages:
   - { name: git,                state: latest  }
@@ -24,6 +25,7 @@ homebrew_cask_installed_packages:
   - { name: dash,               state: latest  }
   - { name: docker,             state: latest  }
   - { name: dropbox,            state: latest  }
+  - { name: emacs-mac,          state: latest  }
   - { name: firefox,            state: latest  }
   - { name: github,             state: latest  }
   - { name: google-chrome,      state: latest  }
