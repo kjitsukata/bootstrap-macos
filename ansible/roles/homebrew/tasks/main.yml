@@ -30,3 +30,11 @@
     state: "{{ item.state }}"
   with_items: "{{ homebrew_cask_installed_packages }}"
   tags: homebrew_cask
+
+- name: copy delete-emacs-pkg.sh
+  copy:
+    src: delete-emacs-pkg.sh
+    dest: /usr/local/bin/delete-emacs-pkg.sh
+    owner: root
+    group: wheel
+    mode: 0755
