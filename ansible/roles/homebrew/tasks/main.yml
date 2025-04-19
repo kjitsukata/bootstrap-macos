@@ -3,12 +3,18 @@
   community.general.homebrew:
     update_homebrew: true
     upgrade_all: true
-  tags: homebrew
+  tags:
+    - homebrew
+    - mas
+    - mac-app-store
 
 - name: homebrew package upgrade
   homebrew_cask:
     upgrade_all: true
-  tags: homebrew_cask
+  tags:
+    - homebrew_cask
+    - mas
+    - mac-app-store
 
 - name: homebrew taps are enabled
   homebrew_tap:
@@ -54,4 +60,10 @@
     group: wheel
     mode: 0755
   become: yes
+
+- name: Importing mas tasks
+  import_tasks: mas.yml
+  tags:
+    - mas
+    - mac-app-store
 

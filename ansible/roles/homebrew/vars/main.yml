@@ -42,3 +42,20 @@ homebrew_cask_installed_packages:
   - { name: vagrant,            state: latest  }
   - { name: virtualbox,         state: latest  }
   - { name: visual-studio-code, state: latest  }
+
+mas_installed_packages:
+  - { name: 1Password for Safari, appid: 1569813296, state: present } #Safari Web Extensions
+  - { name: Amphetamine,          appid: 937984704,  state: present }
+  - { name: GarageBand,           appid: 682658836,  state: present }
+  - { name: iMovie,               appid: 408981434,  state: present }
+  - { name: Keynote,              appid: 409183694,  state: present }
+  - { name: Kindle,               appid: 302584613,  state: present }
+  - { name: LINE,                 appid: 539883307,  state: present }
+  - { name: MONIT,                appid: 1014850245, state: present }
+  - { name: Numbers,              appid: 409203825,  state: present }
+  - { name: Pages,                appid: 409201541,  state: present }
+  - { name: Save to Pocket,       appid: 1477385213, state: present } #Safari Web Extensions
+  - { name: SnippetsLab,          appid: 1006087419, state: present }
+  - { name: Windows App,          appid: 1295203466, state: present }
+  - { name: Xcode,                appid: 497799835,  state: present }
+
