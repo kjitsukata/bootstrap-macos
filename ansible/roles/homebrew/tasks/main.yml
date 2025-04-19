@@ -31,6 +31,12 @@
   with_items: "{{ homebrew_cask_installed_packages }}"
   tags: homebrew_cask
 
+- name: python symbolic link are created
+  file:
+    src: /opt/homebrew/bin/python3
+    dest: /opt/homebrew/bin/python
+    state: link
+
 - name: copy delete-emacs-pkg.sh
   copy:
     src: delete-emacs-pkg.sh

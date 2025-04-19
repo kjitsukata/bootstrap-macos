@@ -15,7 +15,8 @@ homebrew_installed_packages:
   - { name: openssl@1.1,        state: latest  }
   - { name: openssl@3.0,        state: latest  }
   - { name: packer,             state: latest  }
-  - { name: python@3.12,        state: latest  }
+  - { name: python@3.11,        state: latest  }
+  - { name: python@3.13,        state: latest  }
   - { name: tmux,               state: latest  }
 
 homebrew_cask_installed_packages:
