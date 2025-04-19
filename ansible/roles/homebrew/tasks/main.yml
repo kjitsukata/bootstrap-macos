@@ -39,3 +39,13 @@
     group: wheel
     mode: 0755
   become: yes
+
+- name: copy update-brew.sh
+  copy:
+    src: update-brew.sh
+    dest: /usr/local/bin/update-brew.sh
+    owner: root
+    group: wheel
+    mode: 0755
+  become: yes
+
