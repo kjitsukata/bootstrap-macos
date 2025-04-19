@@ -1,0 +1,12 @@
+---
+- name: installing mas packages
+  community.general.homebrew:
+    name: "mas"
+    state: "present"
+
+- name: installing apps from mac app store
+  community.general.mas:
+    id: "{{ item.appid }}"
+    state: "{{ item.state }}"
+  with_items: "{{ mas_installed_packages }}"
+
