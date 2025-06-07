@@ -28,6 +28,7 @@ homebrew_cask_installed_packages:
   - { name: dropbox,            state: latest  }
   - { name: emacs-mac,          state: latest  }
   - { name: firefox,            state: latest  }
+  - { name: forklift,           state: latest  }
   - { name: github,             state: latest  }
   - { name: google-chrome,      state: latest  }
   - { name: google-cloud-sdk,   state: latest  }
