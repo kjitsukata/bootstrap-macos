@@ -37,6 +37,7 @@ homebrew_cask_installed_packages:
   - { name: mysqlworkbench,     state: latest  }
   - { name: notion,             state: latest  }
   - { name: notion-calendar,    state: latest  }
+  - { name: raindropio,         state: latest  }
   - { name: rectangle,          state: latest  }
   - { name: sequel-ace,         state: latest  }
   - { name: slack,              state: latest  }

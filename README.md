@@ -11,6 +11,7 @@
 ### Applications (with Homebrew Cask)
 
 - [ForkLift](https://binarynights.com/)
+- [Raindrop.io](https://raindrop.io/)
 
 #### Change default file viewer to [ForkLift](https://binarynights.com/)
 
