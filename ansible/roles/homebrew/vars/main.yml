@@ -5,45 +5,45 @@ homebrew_taps:
   - { name: railwaycat/emacsmacport,  state: present }
 
 homebrew_installed_packages:
-  - { name: git,                state: latest  }
-  - { name: git-flow,           state: latest  }
-  - { name: grep,               state: latest  }
-  - { name: libressl,           state: latest  }
-  - { name: mysql-client,       state: latest  }
-  - { name: mysql-client@8.0,   state: latest  }
-  - { name: mysql-client@8.4,   state: latest  }
-  - { name: openssl@1.1,        state: latest  }
-  - { name: openssl@3.0,        state: latest  }
-  - { name: packer,             state: latest  }
-  - { name: python@3.11,        state: latest  }
-  - { name: python@3.13,        state: latest  }
-  - { name: tmux,               state: latest  }
+  - { name: git,                state: present }
+  - { name: git-flow,           state: present }
+  - { name: grep,               state: present }
+  - { name: libressl,           state: present }
+  - { name: mysql-client,       state: present }
+  - { name: mysql-client@8.0,   state: present }
+  - { name: mysql-client@8.4,   state: present }
+  - { name: openssl@1.1,        state: present }
+  - { name: openssl@3.0,        state: present }
+  - { name: packer,             state: present }
+  - { name: python@3.11,        state: present }
+  - { name: python@3.13,        state: present }
+  - { name: tmux,               state: present }
 
 homebrew_cask_installed_packages:
-  - { name: alfred,             state: latest  }
-  - { name: appcleaner,         state: latest  }
-  - { name: battery,            state: latest  }
-  - { name: dash,               state: latest  }
-  - { name: docker,             state: latest  }
-  - { name: dropbox,            state: latest  }
-  - { name: emacs-mac,          state: latest  }
-  - { name: firefox,            state: latest  }
-  - { name: forklift,           state: latest  }
-  - { name: github,             state: latest  }
-  - { name: google-chrome,      state: latest  }
-  - { name: google-cloud-sdk,   state: latest  }
-  - { name: google-drive,       state: latest  }
-  - { name: multipass,          state: latest  }
-  - { name: mysqlworkbench,     state: latest  }
-  - { name: notion,             state: latest  }
-  - { name: notion-calendar,    state: latest  }
-  - { name: raindropio,         state: latest  }
-  - { name: rectangle,          state: latest  }
-  - { name: sequel-ace,         state: latest  }
-  - { name: slack,              state: latest  }
-  - { name: vagrant,            state: latest  }
-  - { name: virtualbox,         state: latest  }
-  - { name: visual-studio-code, state: latest  }
+  - { name: alfred,             state: present }
+  - { name: appcleaner,         state: present }
+  - { name: battery,            state: present }
+  - { name: dash,               state: present }
+  - { name: docker,             state: present }
+  - { name: dropbox,            state: present }
+  - { name: emacs-mac,          state: present }
+  - { name: firefox,            state: present }
+  - { name: forklift,           state: present }
+  - { name: github,             state: present }
+  - { name: google-chrome,      state: present }
+  - { name: google-cloud-sdk,   state: present }
+  - { name: google-drive,       state: present }
+  - { name: multipass,          state: present }
+  - { name: mysqlworkbench,     state: present }
+  - { name: notion,             state: present }
+  - { name: notion-calendar,    state: present }
+  - { name: raindropio,         state: present }
+  - { name: rectangle,          state: present }
+  - { name: sequel-ace,         state: present }
+  - { name: slack,              state: present }
+  - { name: vagrant,            state: present }
+  - { name: virtualbox,         state: present }
+  - { name: visual-studio-code, state: present }
 
 mas_installed_packages:
   - { name: 1Password for Safari, appid: 1569813296, state: present } #Safari Web Extensions
