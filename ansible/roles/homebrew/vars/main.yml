@@ -2,9 +2,11 @@
 homebrew_taps:
   - { name: homebrew/bundle,          state: present }
   - { name: homebrew/services,        state: present }
+  - { name: oven-sh/bun,              state: present }
   - { name: railwaycat/emacsmacport,  state: present }
 
 homebrew_installed_packages:
+  - { name: bun,                state: present }
   - { name: git,                state: present }
   - { name: git-flow,           state: present }
   - { name: grep,               state: present }
