@@ -9,6 +9,7 @@ homebrew_installed_packages:
   - { name: bun,                state: present }
   - { name: git,                state: present }
   - { name: git-flow,           state: present }
+  - { name: go,                 state: present }
   - { name: grep,               state: present }
   - { name: libressl,           state: present }
   - { name: mysql-client,       state: present }
