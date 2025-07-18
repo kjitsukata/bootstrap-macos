@@ -32,6 +32,8 @@ homebrew_cask_installed_packages:
   - { name: dropbox,            state: present }
   - { name: emacs-mac,          state: present }
   - { name: firefox,            state: present }
+  - { name: font-jetbrains-mono,  state: present }
+  - { name: font-source-code-pro, state: present }
   - { name: forklift,           state: present }
   - { name: github,             state: present }
   - { name: google-chrome,      state: present }
