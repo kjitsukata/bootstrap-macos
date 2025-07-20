@@ -40,6 +40,8 @@ if [ "$TERM" != "linux" ] && [ -f "/opt/homebrew/bin/powerline-go" ]; then
 fi
 ```
 
+- [powerline-go](https://github.com/justjanne/powerline-go)
+
 ### Change default file viewer to [ForkLift](https://binarynights.com/)
 
 Execute the following command and then reboot the macOS.
