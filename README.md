@@ -4,7 +4,7 @@
 
 ## Installation
 
-## Included Applications / Configuration
+## Included Applications
 
 ### Packages (with Homebrew)
 
@@ -13,7 +13,34 @@
 - [ForkLift](https://binarynights.com/)
 - [Raindrop.io](https://raindrop.io/)
 
-#### Change default file viewer to [ForkLift](https://binarynights.com/)
+### Applications (with mas)
+
+## Configuration
+
+### Change prompt for Zsh (powerline-go)
+
+Add the following to `.zshrc`:  
+
+```bash
+function powerline_precmd() {
+    PS1="$(/opt/homebrew/bin/powerline-go -error $?)"
+}
+
+function install_powerline_precmd() {
+  for s in "${precmd_functions[@]}"; do
+    if [ "$s" = "powerline_precmd" ]; then
+      return
+    fi
+  done
+  precmd_functions+=(powerline_precmd)
+}
+
+if [ "$TERM" != "linux" ] && [ -f "/opt/homebrew/bin/powerline-go" ]; then
+    install_powerline_precmd
+fi
+```
+
+### Change default file viewer to [ForkLift](https://binarynights.com/)
 
 Execute the following command and then reboot the macOS.
 
@@ -30,6 +57,3 @@ defaults write com.apple.LaunchServices/com.apple.launchservices.secure LSHandle
 ```
 
 - [ForkLift Manual - Default File Viewer](https://binarynights.com/manual#fileviewer)
-
-### Applications (with mas)
-
