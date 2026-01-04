@@ -48,6 +48,11 @@
   tags:
     - plenv
 
+- name: Importing pyenv tasks
+  import_tasks: pyenv.yml
+  tags:
+    - pyenv
+
 - name: Importing tfenv tasks
   import_tasks: tfenv.yml
   tags:
