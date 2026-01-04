@@ -1,0 +1,37 @@
+---
+- name: Installing pyenv
+  shell: "{{ anyenv.bin_path }} install pyenv"
+  args:
+    creates: "{{ pyenv.bin_path }}"
+  tags:
+    - pyenv
+
+- name: Checking whether a specific version of python is installed
+  shell: "pyenv versions | grep {{ item }}"
+  register: pyver
+  with_items: "{{ pyenv.python_versions }}"
+  changed_when: False
+  failed_when: False
+  tags:
+    - pyenv
+
+- name: Installing python
+  shell: "pyenv install {{ item.item }}"
+  when: item.rc != 0
+  with_items: "{{ pyver.results }}"
+  tags:
+    - pyenv
+
+- name: CHecking python global version
+  shell: "pyenv version | grep {{ pyenv.python_global_version }}"
+  register: globalver
+  changed_when: False
+  failed_when: False
+  tags:
+    - pyenv
+
+- name: Setting python glocal version
+  shell: "pyenv global {{ pyenv.python_global_version }}"
+  when: globalver.rc != 0
+  tags:
+    - pyenv

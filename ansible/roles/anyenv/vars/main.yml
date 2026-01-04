@@ -22,6 +22,12 @@ plenv:
   perl_versions:
     - 5.40.0
 
+pyenv:
+  bin_path: "~/.anyenv/envs/pyenv/bin/pyenv"
+  python_global_version: 3.14.2
+  python_versions:
+    - 3.14.2
+
 tfenv:
   bin_path: "~/.anyenv/envs/tfenv/bin/tfenv"
   terraform_default_version: 1.10.5
@@ -30,4 +36,3 @@ tfenv:
     - 1.11.4
     - 1.10.5
     - 1.9.8
-
