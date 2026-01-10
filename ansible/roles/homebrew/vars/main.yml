@@ -19,8 +19,8 @@ homebrew_installed_packages:
   - { name: openssl@3.0,        state: present }
   - { name: packer,             state: present }
   - { name: powerline-go,       state: present }
-  - { name: python@3.11,        state: present }
   - { name: python@3.13,        state: present }
+  - { name: python@3.14,        state: present }
   - { name: tmux,               state: present }
 
 homebrew_cask_installed_packages:
