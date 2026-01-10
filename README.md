@@ -8,6 +8,10 @@
 
 ### Packages (with Homebrew)
 
+- [Python](https://www.python.org/)
+  - 3.13
+  - 3.14
+
 ### Applications (with Homebrew Cask)
 
 - [Raindrop.io](https://raindrop.io/)
