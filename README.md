@@ -14,6 +14,7 @@
 
 ### Applications (with Homebrew Cask)
 
+- [Comet](https://www.perplexity.ai/comet)
 - [Raindrop.io](https://raindrop.io/)
 
 ### Applications (with mas)
