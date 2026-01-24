@@ -46,6 +46,7 @@ homebrew_cask_installed_packages:
   - { name: mysqlworkbench,     state: present }
   - { name: notion,             state: present }
   - { name: notion-calendar,    state: present }
+  - { name: obsidian,           state: present }
   - { name: raindropio,         state: present }
   - { name: rectangle,          state: present }
   - { name: sequel-ace,         state: present }
