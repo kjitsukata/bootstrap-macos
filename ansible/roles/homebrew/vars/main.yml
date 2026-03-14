@@ -43,6 +43,8 @@ homebrew_cask_installed_packages:
   - { name: google-chrome,      state: present }
   - { name: google-cloud-sdk,   state: present }
   - { name: google-drive,       state: present }
+  - { name: kubectl,            state: present }
+  - { name: minikube,           state: present }
   - { name: multipass,          state: present }
   - { name: mysqlworkbench,     state: present }
   - { name: notion,             state: present }
