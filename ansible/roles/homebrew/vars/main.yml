@@ -11,7 +11,9 @@ homebrew_installed_packages:
   - { name: git-flow,           state: present }
   - { name: go,                 state: present }
   - { name: grep,               state: present }
+  - { name: kubectl,            state: present }
   - { name: libressl,           state: present }
+  - { name: minikube,           state: present }
   - { name: mysql-client,       state: present }
   - { name: mysql-client@8.0,   state: present }
   - { name: mysql-client@8.4,   state: present }
