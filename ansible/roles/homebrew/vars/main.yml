@@ -8,7 +8,6 @@ homebrew_taps:
 homebrew_installed_packages:
   - { name: bun,                state: present }
   - { name: gh,                 state: present }
-  - { name: git,                state: present }
   - { name: git-flow,           state: present }
   - { name: go,                 state: present }
   - { name: grep,               state: present }
